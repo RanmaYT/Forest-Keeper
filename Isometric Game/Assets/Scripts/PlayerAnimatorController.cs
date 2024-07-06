@@ -11,6 +11,7 @@ public class PlayerAnimatorController : MonoBehaviour
     public bool isOnCoyoteTime;
     
     [SerializeField] private Animator playerAnimator;
+
     [SerializeField] private PlayerController playerController;
 
     public Vector2 lastDirection = Vector2.zero;

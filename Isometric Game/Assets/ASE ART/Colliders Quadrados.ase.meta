@@ -1,0 +1,323 @@
+fileFormatVersion: 2
+guid: 8191f6cf427a0ef4683b62f41dfd976b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 48
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638551056111757789
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Colliders Quadrados
+    originalName: 
+    pivot: {x: 0.7176471, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 85
+      height: 80
+    spriteID: 344841f7408acb24fb8de200f6c1ebd7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData:
+  - name: Colliders Quadrados_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b5914fa699697f947b305acf7c4b6069
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -11.776503, y: 10.167318}
+      - {x: -11.979313, y: -4.850506}
+      - {x: 1.1733017, y: -11.979313}
+      - {x: 2.8489456, y: -11.979313}
+      - {x: 2.8991203, y: 2.7816315}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Colliders Quadrados_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: caa750bc7b7671f4e903449134142fc1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -11.020691, y: 3.0780678}
+      - {x: -10.796646, y: -11.802889}
+      - {x: -9.057381, y: -11.77908}
+      - {x: 4.0445023, y: -4.6662817}
+      - {x: 4, y: 10.240047}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Colliders Quadrados_2
+    originalName: 
+    pivot: {x: 0.39632377, y: 0.3991257}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 4c344171ffbaa2444ab73f406d3d9a3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -0.19917297, y: 5.941868}
+      - {x: -5.875477, y: 5.676304}
+      - {x: -11.941868, y: -0.3113079}
+      - {x: -11.742693, y: -5.755084}
+      - {x: -5.7468243, y: -11.742694}
+      - {x: -0.43996143, y: -11.875477}
+      - {x: 1.8256054, y: -10.92122}
+      - {x: 5.875477, y: -5.4275713}
+      - {x: 5.589262, y: 0.028907776}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Colliders Quadrados_3
+    originalName: 
+    pivot: {x: 0.40890408, y: 0.42029104}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 8bd130252976d4541bc2d7579f755c63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -8.962929, y: 2.9028301}
+      - {x: -16, y: -0.054899216}
+      - {x: -15.829605, y: -3.8315067}
+      - {x: -8.838814, y: -6.988886}
+      - {x: 2.7456207, y: -6.955063}
+      - {x: 9.943199, y: -3.9450989}
+      - {x: 9.898529, y: 0.020442963}
+      - {x: 2.9693375, y: 2.9553204}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 319384815
+    name: Colliders Quadrados
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Colliders Quadrados
+      frameIndex: 0
+      cellRect:
+        x: 7
+        y: 39
+        width: 86
+        height: 83
+      spriteId: 344841f7408acb24fb8de200f6c1ebd7
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}
