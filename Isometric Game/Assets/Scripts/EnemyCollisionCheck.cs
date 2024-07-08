@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyCollisionCheck : MonoBehaviour
 {
-    [SerializeField] GameManager gameManagerScript;
+    //[SerializeField] GameManager gameManagerScript;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gameManagerScript.gameOver = true;
+            //gameManagerScript.gameOver = true;
 
             Destroy(collision.gameObject);
 

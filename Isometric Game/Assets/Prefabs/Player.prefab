@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 148511687350412875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.8, y: -5.45, z: 0}
+  m_LocalPosition: {x: 30, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -187,8 +187,6 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   speed: 4
-  gameManagerScript: {fileID: 8046059572893732406, guid: 3e767b5767c241040a4b466c570aa475, type: 3}
-  weaponPrefab: {fileID: 6783830323453658473, guid: 5d875513d8cc84240a433cf2e5e8a4d4, type: 3}
   currentDirection: {x: 0, y: 0}
 --- !u!114 &6343735723539355801
 MonoBehaviour:

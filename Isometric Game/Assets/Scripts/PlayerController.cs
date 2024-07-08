@@ -4,21 +4,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
+    // This script is used to control the actions of the player, like movement and attack;
+
     [SerializeField] float horizontalInput;
     [SerializeField] float verticalInput;
     [SerializeField] float speed = 1.5f;
-
-    [SerializeField] GameManager gameManagerScript;
-
-    [SerializeField] GameObject weaponPrefab;
-
+  
     private Rigidbody2D playerRb;
 
     public Vector2 currentDirection;
-
-    private Vector3 currentPos;
-
-    private bool withBoomerang = true;
 
     private void Awake()
     {
@@ -28,32 +22,17 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         currentDirection.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        currentPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     private void FixedUpdate()
     {
-        if (!gameManagerScript.gameOver)
-        {
-            Move();
+        // FixedUpdate is likely to be used when we are using physics, like movement.
 
-            Attack();
-        }
+        Move(); // Here we are getting the move function of the player.
     }
 
     private void Move()
     {
-        playerRb.velocity = currentDirection.normalized * speed;
-    }
-
-    private void Attack()
-    {
-        //boomerangPos.position = currentPosition.position + offset;
-
-        if (Input.GetKeyDown(KeyCode.Space) && withBoomerang)
-        {
-            Instantiate(weaponPrefab, transform);
-        }
+        playerRb.velocity = currentDirection.normalized * speed; // The "normalized" is used to make sure that the player when moving diagonally isn't faster.
     }
 }

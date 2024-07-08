@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    private Transform target;
+
     public float speed = 2.0f;
-    
-    private Rigidbody2D enemyRb;
 
-    [SerializeField] GameManager gameManagerScript;
-
-    [SerializeField] Transform player;
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform ;
+    }
 
     void FixedUpdate()
     {
-        if (!gameManagerScript.gameOver)
+        if(target != null)
         {
             EnemyMove();
         }
@@ -22,6 +23,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void EnemyMove()
     {
-       transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 }

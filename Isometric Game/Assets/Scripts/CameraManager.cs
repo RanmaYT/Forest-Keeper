@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    [SerializeField] GameManager gameManagerScript;
-    [SerializeField] private Transform playerPos;
-
+    private Transform target;
     private Vector3 offset = new Vector3(1, 0, -1);
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     void Update()
     {
-        if(!gameManagerScript.gameOver)
+       if (target != null)
         {
-            transform.position = playerPos.position + offset;
+            transform.position = target.position + offset;
         }
     }
 }
