@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoomerangAnimator : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed = -4.5f;
+    [SerializeField] float rotationSpeed;
 
     // Update is called once per frame
     void Update()

@@ -23,6 +23,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void EnemyMove()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 }

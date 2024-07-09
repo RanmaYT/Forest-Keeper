@@ -187,6 +187,7 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   speed: 4
+  boomerangPrefab: {fileID: 6783830323453658473, guid: 5d875513d8cc84240a433cf2e5e8a4d4, type: 3}
   currentDirection: {x: 0, y: 0}
 --- !u!114 &6343735723539355801
 MonoBehaviour:

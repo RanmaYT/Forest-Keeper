@@ -11,38 +11,69 @@ public class BoomerangMovement : MonoBehaviour
     // Additionals: When the boomerang hits something, he comes back more fast depending in how distant he was from the end of the timer;
     // Additionals²: When the boomerang is going away, he desaccelerate, but when he is coming back, he gots faster;
 
-    [SerializeField] float timer = 0.5f;
-    [SerializeField] float speed = 2.5f;
+    [SerializeField] PlayerAnimatorController playerDir;
+    [SerializeField] float speed = 1.5f;
+    [SerializeField] float acellaration = 0.2f;
 
-    [SerializeField] private PlayerAnimatorController playerAnimatorControllerScript;
+    GameObject target;
+    PlayerController playerController;
+    int state = 1;
 
-    private Rigidbody2D boomerangRb;
+    public Rigidbody2D boomerangRb;
+    public float timer = 0.64f;
+    public Vector2 backDirection;
 
-    private void Awake()
+    private void Start()
     {
         boomerangRb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        playerDir = GetComponentInParent<PlayerAnimatorController>();
+        playerController = GetComponentInParent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        backDirection = target.transform.position - transform.position;
     }
 
     private void FixedUpdate()
     {
-        if (timer > 0)
+        if(state == 1)
         {
-            GoingAway();
+            Trown();
         }
-        else
+
+        if(state == 2)
         {
-           // GoingBack();
+            GoingBack();
         }
     }
 
-    private void GoingAway()
+    void Trown()
     {
-        boomerangRb.velocity = playerAnimatorControllerScript.lastDirection * speed;
-        //timer = -Time.time;
+        boomerangRb.velocity = (playerDir.lastDirection.normalized * speed);
+        playerController.hasBoomerang = false;
+
+        speed -= acellaration;
+        timer -= Time.deltaTime;
+
+        if(timer < 0.1)
+        {
+            state = 2;
+            timer = 0.64f;
+        }
     }
 
-    private void GoingBack()
+    public void GoingBack()
     {
+        boomerangRb.velocity = (backDirection.normalized * speed);
 
+        speed += acellaration;
+        timer -= Time.deltaTime;
+
+        if(timer < 0.1)
+        {
+            playerController.hasBoomerang = true;
+        }
     }
 }

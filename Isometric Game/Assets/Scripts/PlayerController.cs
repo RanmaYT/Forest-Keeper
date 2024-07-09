@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float horizontalInput;
     [SerializeField] float verticalInput;
     [SerializeField] float speed = 1.5f;
+    [SerializeField] GameObject boomerangPrefab;
   
     private Rigidbody2D playerRb;
 
     public Vector2 currentDirection;
+    public bool hasBoomerang = true;
 
     private void Awake()
     {
@@ -29,10 +31,20 @@ public class PlayerController : MonoBehaviour
         // FixedUpdate is likely to be used when we are using physics, like movement.
 
         Move(); // Here we are getting the move function of the player.
+
+        Attack();
     }
 
     private void Move()
     {
         playerRb.velocity = currentDirection.normalized * speed; // The "normalized" is used to make sure that the player when moving diagonally isn't faster.
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && hasBoomerang)
+        {
+            Instantiate(boomerangPrefab, transform);
+        }
     }
 }

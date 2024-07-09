@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4829315492801285881}
   - component: {fileID: 8521536359342813687}
   - component: {fileID: 2483828338911575047}
+  - component: {fileID: -1668282361089200435}
   m_Layer: 0
   m_Name: Boomerang
   m_TagString: PlayerWeapon
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234d170971418594bbf1f93dddf92303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 2.13
+  rotationSpeed: -7.5
 --- !u!114 &2483828338911575047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c40bf332f0a965419d7a77d40f62503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.5
-  speed: 2
-  playerAnimatorControllerScript: {fileID: 6343735723539355801, guid: 4b1cc059e44922e499253d4302ad06d1, type: 3}
+  playerDir: {fileID: 0}
+  speed: 10
+  acellaration: 0.4
+--- !u!114 &-1668282361089200435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783830323453658473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7acc27d3a04ea5469d7b62fffe5486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boomerangMovement: {fileID: 2483828338911575047}
