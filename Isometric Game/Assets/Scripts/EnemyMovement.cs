@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
 
     public float speed = 2.0f;
 
@@ -15,14 +15,14 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(target != null)
-        {
-            EnemyMove();
-        }
+        EnemyMove();
     }
 
-    private void EnemyMove()
+    public void EnemyMove()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        if (target != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);    
+        }
     }
 }
