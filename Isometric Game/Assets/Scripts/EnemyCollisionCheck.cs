@@ -10,10 +10,7 @@ public class EnemyCollisionCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-          
             Destroy(collision.gameObject);
-
-            Debug.Log("GAMEOVER");
         } 
     }
 }

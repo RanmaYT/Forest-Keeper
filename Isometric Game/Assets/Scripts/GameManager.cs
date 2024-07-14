@@ -8,20 +8,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject bossPrefab;
     [SerializeField] GameObject specialCollider;
+    [SerializeField] GameObject gameOverScreen;
     [SerializeField] TriggerCollider triggerColliderScript;
     [SerializeField] EnemyCounter enemyCounter;
 
-    Vector3[] positions = new Vector3[12]; 
+    Vector3[] positions = new Vector3[12];
+
 
     float spawnRate = 1f;
 
-    int spawnNumber = 5;
+    int spawnNumber;
     int spawnCount;
     int randomPosIndex;
 
-    public int invokeCalled = 0;
-
     GameObject target;
+
+    public int invokeCalled = 0;
 
     private void Awake()
     {
@@ -64,6 +66,11 @@ public class GameManager : MonoBehaviour
         {
             specialCollider.SetActive(true);
         }
+
+        if(target == null)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 
     void EnemySpawner()
@@ -84,10 +91,9 @@ public class GameManager : MonoBehaviour
         if(triggerColliderScript.whichTrigger == 1)
         {
             randomPosIndex = Random.Range(0, 6);
-
-            GameObject.FindGameObjectsWithTag("Enemy"); 
             if(invokeCalled == 0)
             {
+                spawnNumber = Random.Range(10, 26);
                 invokeCalled++;
                 target.transform.position = new Vector3(22, -1.5f, 0);
 
@@ -99,11 +105,10 @@ public class GameManager : MonoBehaviour
         {
             randomPosIndex = Random.Range(6, 12);
 
-
             if (invokeCalled == 1)
             {
                 spawnCount = 0;
-                spawnNumber = 10;
+                spawnNumber = Random.Range(20, 41);
                 invokeCalled++;
                 target.transform.position = new Vector3(0, 10, 0);
 
@@ -115,7 +120,7 @@ public class GameManager : MonoBehaviour
             if (invokeCalled == 2)
             {
                 invokeCalled++;
-                Invoke("BossSpawner", 2);
+                Invoke("BossSpawner", 1);
             }
         }
 

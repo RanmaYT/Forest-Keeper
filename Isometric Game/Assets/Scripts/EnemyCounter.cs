@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyCounter : MonoBehaviour
 {
+    [SerializeField] AudioSource endSound;
+
     public GameObject[] enemies;
     public int enemiesAlive;
 
@@ -13,6 +15,10 @@ public class EnemyCounter : MonoBehaviour
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemiesAlive = enemies.Length;
-        Debug.Log(enemies.Length);
+
+        if(enemiesAlive == 0)
+        {
+            endSound.Play();
+        }
     }
 }

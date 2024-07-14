@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class PlayerAnimatorController : MonoBehaviour
 {
-    public float coyoteTime = 1.0f;
-
-    private bool isWalking;
-    public bool isOnCoyoteTime;
-    
     [SerializeField] private Animator playerAnimator;
-
     [SerializeField] private PlayerController playerController;
 
+    public float coyoteTime = 1.0f;
+    public bool isWalking;
+    public bool isOnCoyoteTime;
     public Vector2 lastDirection = Vector2.zero;
     public Vector2 currentDirection = Vector2.zero;
 
@@ -31,11 +28,6 @@ public class PlayerAnimatorController : MonoBehaviour
         WalkingChecking();
         DirectionChecking();
         AnimPosition();
-
-        //if(!isWalking && isOnCoyoteTime)
-        //{
-        //    CancelInvoke(nameof(StopWaiting));
-        //}
     }
 
     private void AnimPosition()
@@ -49,8 +41,6 @@ public class PlayerAnimatorController : MonoBehaviour
         isWalking = currentDirection.magnitude > 0;
         playerAnimator.SetBool("Walking", isWalking);
 
-        //isDiagonally =  
-        //playerAnimator.SetBool("")
     }
 
     private void DirectionChecking()

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float verticalInput;
     [SerializeField] float speed = 1.5f;
     [SerializeField] GameObject boomerangPrefab;
+    [SerializeField] AudioSource boomerangSound;
   
     private Rigidbody2D playerRb;
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && hasBoomerang)
         {
+            boomerangSound.Play();
             Instantiate(boomerangPrefab, transform);
         }
     }
